@@ -10,18 +10,27 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script>
+
+        function ResetForm(){
+            document.getElementById('myForm').reset();
+        }
+
+
         function SubForm() {
             $.ajax({
                 url: "https://api.apispreadsheets.com/data/19524/",
                 type: "post",
                 data: $("#myForm").serializeArray(),
                 success: function() {
-                    alert("Form Data Submitted :)");
+                    alert("Sucess: You have Joined the Game");
                 },
                 error: function() {
-                    alert("There was an error :(");
+                    alert("There was an error, try again or enter in contact with the website developer. :(");
                 },
             });
+        
+            
+
         }
     </script>
 </head>
@@ -108,7 +117,7 @@
 
                 <p><span id="red">*</span>mandatory fields</p>
             </form>
-            <button onclick="SubForm()">Submit</button>
+            <button onclick="SubForm();ResetForm()">Submit</button>
         </div>
     </section>
     <footer class="text_center white_text">
