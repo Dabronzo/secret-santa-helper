@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SecretSantaHelper</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: "https://api.apispreadsheets.com/data/19524/",
+                type: "post",
+                data: $("#myForm").serializeArray(),
+                success: function() {
+                    alert("Form Data Submitted :)");
+                },
+                error: function() {
+                    alert("There was an error :(");
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header class="main_header text_center" id="home">
+        <div class="vertical_center">
+            <h1 class="main_title darkred_text">Secret Santa Helper</h1>
+        </div>
+    </header>
+    <nav class="text_center black_background text_uppercase">
+        <a href="#home" aria-label="Go to the home">Home</a>
+        <a href="form.html" aria-label="View the participants">View Participants</a
+      >
+      <a href="#join" aria-label="join a game">Join a Game</a>
+    </nav>
+    <section class="main_section">
+        <div class="wrapper">
+            <h2 class="text_center">What is this?</h2>
+            <p id="container_one">
+                Secret Santa Helper is a <strong>free</strong> online<strong>Secret Santa</strong
+          >
+          manager. Currently this application will be used strictly to a group
+          of family and friends at the christmas party in
+          <strong>Braunlage, Germany</strong>. If you are here because you recived a invitation link <strong>Welcome</strong>, feel free to have a look at the website and <strong>Join the Game</strong>
+            </p>
+        </div>
+    </section>
+    <section id="middle" class="text_center white_text">
+        <div id="join_relative" class="how_to_container float_left">
+            <h2>Join The Game</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum maximus nulla. Donec ac ullamcorper enim. Aliquam lobortis ligula quis risus euismod eleifend. Fusce a eros eget ligula pharetra tincidunt a quis tortor. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+        </div>
+        <div id="top_relative" class="how_to_container">
+            <h2>How to Play</h2>
+        </div>
+        <div id="view_to_relative" class="how_to_container float_right">
+            <h2>View Participants</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum maximus nulla. Donec ac ullamcorper enim. Aliquam lobortis ligula quis risus euismod eleifend. Fusce a eros eget ligula pharetra tincidunt a quis tortor. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </p>
+        </div>
+    </section>
+    <section id="join">
+        <h2 id="join_header" class="text_center">Join the Game</h2>
+        <div>
+            <form id="myForm">
+                <fieldset>
+                    <legend>Your details</legend>
+                    <div id="name_container">
+                        <label for="name_field" id="name_label">Name<span id="red">*</span></label
+              >
+              <input
+                id="name_field"
+                type="text"
+                name="playername"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email_field" id="email_label"
+                >Email<span id="red">*</span></label
+              >
+              <input
+                id="email_field"
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+            <div>
+              <p>Write some short facts about yourself, interests or hobbies</p>
+            </div>
+            <div>
+              <label for="hobbies" class="block_label">Interests/Hobbies</label>
+                        <input id="hobbies" type="text" name="hobbies" />
+                    </div>
+                </fieldset>
+
+                <p><span id="red">*</span>mandatory fields</p>
+            </form>
+            <button onclick="SubForm()">Submit</button>
+        </div>
+    </section>
+    <footer class="text_center white_text">
+        <p>Copyright © AYRTON D'ABRONZO NETO</p>
+        <span>FIND ME ON:</span>
+        <a href="https://github.com/Dabronzo" target="_blank" rel="noopener" aria-label="Find me on GitHub(link open in a new tab)">GitHub</a
+      >
+      <a
+        href="https://www.linkedin.com/in/ayrton-netto-ab7577125/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Find me on LinkedIn(link open in a new tab)"
+        >LinkedIn</a
+      >
+      <a
+        href="https://www.instagram.com/ayrtonterceiro/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Find me on Instagram(link open in a new tab)"
+        >Instagram</a
+      >
+    </footer>
+  </body>
+</html>
