@@ -7,6 +7,7 @@ body {
     font-family: "Open Sans", Arial, sans-serif;
     margin: 0;
     background-color: rgb(184, 181, 181);
+    line-height: 1.8;
 }
 
 h1,
@@ -107,6 +108,10 @@ header {
     margin: 0 100px 0 100px;
     padding: 0 80px;
     width: auto;
+}
+
+.container_middle{
+    margin:0em 1em 0em 1em;
 }
 
 #join_relative {
@@ -251,7 +256,7 @@ button {
     border: none;
     border-radius: 8px;
     margin-top: 0px;
-    margin-left: 0.8rem;
+    margin-left: 46%;
     padding: 1rem;
 }
 
